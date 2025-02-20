@@ -1,0 +1,88 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}
+.container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.container div {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+.row {
+    display: flex;
+    gap: 15px;
+}
+.row .column {
+    flex: 1;
+}
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+.errormsg{
+    color:red;
+    font-size: 16px;
+}
+.result-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e9f7ef;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    /*width: 100%;*/
+    max-width: 100%;
+    min-height: 50px; /* Allows flexibility */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: auto; /* Adds scroll if content is too large */
+    display: block;
+}
+

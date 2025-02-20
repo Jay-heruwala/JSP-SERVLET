@@ -1,0 +1,132 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    width: 100%;
+    width: 400px;
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.image-container {
+    flex-shrink: 0;
+    /*max-height: 100%;*/
+    align-self:  stretch;
+
+}
+
+.image-container img {
+    max-width: 500px;
+    border-radius: 10px;
+    min-height: 100%;
+    align-self: stretch;
+}
+
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+    text-align: center;
+}
+
+div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555555;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-link a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 920px) {
+    .form-container{
+        margin: 20px auto;
+    }
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .image-container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+.error{
+    padding:  2px 5px;
+
+    color:red;
+    font-size: 14px;
+}
