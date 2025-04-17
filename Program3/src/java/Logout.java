@@ -15,6 +15,7 @@ public class Logout extends HttpServlet {
         HttpSession session = request.getSession(false); // Get session if exists
         if (session != null) {
             session.invalidate(); // Invalidate the session
+            
         }
 
         // Redirect to login page after logout

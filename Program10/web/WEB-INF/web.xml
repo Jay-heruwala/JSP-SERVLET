@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.1" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_1.xsd">
+    <servlet>
+        <servlet-name>addBook</servlet-name>
+        <servlet-class>Servlet.addBook</servlet-class>
+        <init-param>
+            <param-name>Name</param-name>
+            <param-value>Value</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteBook</servlet-name>
+        <servlet-class>Servlet.DeleteBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FetchBook</servlet-name>
+        <servlet-class>Servlet.FetchBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateBook</servlet-name>
+        <servlet-class>Servlet.UpdateBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addBook</servlet-name>
+        <url-pattern>/addBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteBook</servlet-name>
+        <url-pattern>/DeleteBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FetchBook</servlet-name>
+        <url-pattern>/FetchBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateBook</servlet-name>
+        <url-pattern>/UpdateBook</url-pattern>
+    </servlet-mapping>
+</web-app>
