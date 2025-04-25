@@ -60,6 +60,10 @@
         <servlet-name>Booking</servlet-name>
         <servlet-class>model.Booking</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CancelBooking</servlet-name>
+        <servlet-class>controller.CancelBooking</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/Registration</url-pattern>
@@ -120,4 +124,11 @@
         <servlet-name>Booking</servlet-name>
         <url-pattern>/Booking</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancelBooking</servlet-name>
+        <url-pattern>/CancelBooking</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
 </web-app>

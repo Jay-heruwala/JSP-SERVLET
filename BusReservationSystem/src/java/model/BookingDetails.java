@@ -20,6 +20,8 @@ public class BookingDetails {
     private Long paymentID;
     private Long breakdownID;
     private String paymentStatus;
+    
+    
 
     // Getters and Setters
     public Long getBookingID() {

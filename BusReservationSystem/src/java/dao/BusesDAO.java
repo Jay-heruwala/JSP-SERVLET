@@ -197,5 +197,19 @@ public class BusesDAO {
     }
 
     
+    public int getActiveBusesCount() {
+        String sql = "SELECT COUNT(*) AS count FROM buses WHERE departure_datetime > NOW()";
+        try (Connection conn = DatabaseUtil.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            if (rs.next()) {
+                return rs.getInt("count");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    
 }
 

@@ -278,7 +278,7 @@
               <a href="findRoute.jsp" class="nav-link">Routes</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">My Bookings</a>
+              <a href="MyBookings.jsp" class="nav-link">My Bookings</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Support</a>

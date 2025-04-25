@@ -3,6 +3,7 @@ package dao;
 import java.sql.*;
 import util.DatabaseUtil;
 import model.User;
+import java.util.*;
 
 public class UserDAO {
 
@@ -36,5 +37,42 @@ public class UserDAO {
 
         return user;
     }
+    
+    public List<User> getAllUsers() {
+        List<User> users = new ArrayList<>();
+        String sql = "SELECT user_id, name, contact_number, email FROM users";
 
+        try (Connection conn = DatabaseUtil.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                User user = new User(
+                    rs.getLong("user_id"),
+                    rs.getString("name"),
+                    rs.getString("contact_number"),
+                    rs.getString("email")
+                );
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
+    }
+
+    
+     public int getTotalCustomers() {
+        String sql = "SELECT COUNT(*) AS count FROM users";
+        try (Connection conn = DatabaseUtil.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            if (rs.next()) {
+                return rs.getInt("count");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }

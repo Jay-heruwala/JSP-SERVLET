@@ -10,10 +10,7 @@
 
 <%
     if (session.getAttribute("LogedAdminInfo") == null) {
-%>  
-<jsp:forward page="AdminLogin.jsp" />
-
-<%
+        response.sendRedirect("AdminLogin.jsp");
     }
 %>
 <html lang="en">
@@ -497,9 +494,10 @@
                     <li><a href="#" data-page="pages/dashboard.jsp" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
                     <li><a herf="#" data-page="pages/adminInfo.jsp" class="active"><i class="fas fa-user"></i>Admin</a></li>
                     <li><a href="#" data-page="pages/bookings.jsp"><i class="fas fa-ticket-alt"></i> Bookings</a></li>
-                    <li><a href="#" data-page="pages/buses.jsp"><i class="fas fa-bus-alt"></i> Buses</a></li>
+                    <li><a href="#" data-page="pages/buses.jsp"><i class="fas fa-bus-alt"></i> Route</a></li>
+                    <li><a href="#" data-page="pages/user.jsp"><i class="fas fa-users"></i> User</a></li>
 <!--                    <li><a href="#" data-page="pages/routes.jsp"><i class="fas fa-route"></i> Routes</a></li>
-                    <li><a href="#" data-page="pages/customers.jsp"><i class="fas fa-users"></i> Customers</a></li>
+                    
                     <li><a href="#" data-page="pages/reports.jsp"><i class="fas fa-chart-bar"></i> Reports</a></li>
                     <li><a href="#" data-page="pages/settings.jsp"><i class="fas fa-cog"></i> Settings</a></li>-->
                 </ul>

@@ -11,6 +11,9 @@ public class Booking {
     private String paymentStatus;
     private String seatNumbers;
     private int passengerCount;
+    
+    
+    
 
     // Getters and Setters
     public int getBookingId() { return bookingId; }

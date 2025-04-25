@@ -10,6 +10,13 @@ public class User {
     
     public User(){}
     
+    public User(long user_id,String name,String contact_number,String email){
+        this.user_id = user_id;
+        this.contact_number = contact_number;
+        this.name = name;
+        this.email = email;
+    }
+    
     
     public long getUser_id() {
         return user_id;
